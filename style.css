@@ -53,3 +53,13 @@ body{
 	background-color: #2FBE70;
 	border: none;
 }
+
+.btn:hover i {
+	color: #2FBE70;
+}
+
+.form-control:focus,
+.btn:focus {
+	outline: 0;
+	box-shadow: none;
+}
