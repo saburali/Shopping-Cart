@@ -1,10 +1,15 @@
 body{
+	height: 100vh;
+	display: flex;
 	background: #fff;
+	align-items: center;
+	justify-content: center;
 }
 .cart{
 	margin: 100px 0;
 	background-color: #F6F5FA;;
 	padding: 60px 0;
+	min-width: 1200px;
 }
 .total-price{
 	padding-bottom: 15px;
@@ -64,16 +69,8 @@ body{
 	box-shadow: none;
 }
 
-input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
-}
-
-input[type=number] {
-  -moz-appearance: textfield;
-}
-
-input[type=number] {
-    pointer-events: none;
+ #checkOut {
+	 display: none;
+	 color: #2FBE70;
+	 text-align: center;
  }

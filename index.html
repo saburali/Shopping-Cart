@@ -14,9 +14,9 @@
 
    <section>
       <div class="container">
-         <div class="cart">
+         <div id="cart" class="cart">
             <div class="col-md-12 col-lg-10 mx-auto">
-               <div class="cart-item">
+               <div id="cart-item" class="cart-item">
                   <div class="row">
                      <div class="col-md-7 center-item">
                         <img src="images/product-1.png" alt="">
@@ -30,7 +30,7 @@
                            <button id="plus-btn" class="btn btn-default"><i class="fas fa-plus"></i></button>
                         </div>
                         <h5>$ <span id="price">1219</span></h5>
-                        <img src="images/remove.png" alt="" class="remove-item">
+                        <a href="#!" id="remove-item"> <img src="images/remove.png" alt="" class="remove-item"> </a>
                      </div>
                   </div>
                </div>
@@ -64,15 +64,18 @@
 
                      <div class="col-md-4 status">
                         <h5>$ <span id="sub-totalPrice">1219</span></h5>
-                        <h5>$ <span id="tax-price">5</span></h5>
+                        <h5>$ <span id="tax-price">10</span></h5>
                         <h5>$ <span id="total-price">1219</span></h5>
                      </div>
                   </div>
                </div>
                <div class="col-md-12 pt-4 pb-4">
-                  <button type="button" class="btn btn-success check-out">Check Out</button>
+                  <button id="chk-btn" type="button" class="btn btn-success check-out">Check Out</button>
                </div>
             </div>
+         </div>
+         <div id="checkOut">
+            <h1> Your order has been accepted. </h1>
          </div>
       </div>
    </section>

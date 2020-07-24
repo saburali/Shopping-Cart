@@ -44,3 +44,19 @@ function addFunction(id) {
     const currentPrice = parseFloat(productRate);
     return currentPrice;
 }
+
+// Remove Item
+const itemRemove = document.getElementById('remove-item');
+itemRemove.addEventListener("click", function () {
+    const item = document.getElementById('cart-item');
+    item.style.display = "none";
+})
+
+// Check Out
+const ChkBtn = document.getElementById('chk-btn');
+ChkBtn.addEventListener("click", function () {
+    const cartArea = document.getElementById('cart');
+    cartArea.style.display = "none";
+    const successArea = document.getElementById('checkOut');
+    successArea.style.display = "block";
+})
