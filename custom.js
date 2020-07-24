@@ -7,7 +7,7 @@ btnAdd.addEventListener('click', function () {
     // Add Number Count
     const valuePlus = inputValue.value = parseInt(inputValue.value) + 1;
     // Calculation Product-rate
-    document.getElementById('product-rate').innerText = (pruductPrice * valuePlus);
+    document.getElementById('price').innerText = (price * valuePlus);
 })
 
 // Minus Button Event
@@ -20,14 +20,14 @@ btnSub.addEventListener('click', function () {
         // Sub Number Cout
         const valueMinus = inputValue.value = parseInt(inputValue.value) - 1;
         // Calculation Product-rate
-        document.getElementById('product-rate').innerText = (pruductPrice * valueMinus);
+        document.getElementById('price').innerText = (price * valueMinus);
     }
 })
 
-// Product Rate Function
+// Price Function
 function addFunction(id){
     const productRate = document.getElementById(id).innerText;
-    const productCurrentPrice = parseInt(productRate);
-    return productCurrentPrice;
+    const currentPrice = parseFloat(productRate);
+    return currentPrice;
 }
-const pruductPrice = addFunction("product-rate");
+const price = addFunction("price");
