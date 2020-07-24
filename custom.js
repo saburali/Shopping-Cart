@@ -38,29 +38,9 @@ btnSub.addEventListener('click', function () {
         document.getElementById("total-price").innerText = priceResult + taxPriceResult;
     }
 })
-
-
-
 // Price Function
 function addFunction(id) {
     const productRate = document.getElementById(id).innerText;
     const currentPrice = parseFloat(productRate);
     return currentPrice;
 }
-
-
-
-
-// console.log({
-//     totalPriceResult
-// });
-
-// console.log({
-//     subTotal
-// });
-// console.log({
-//     taxPrice
-// });
-// console.log({
-//     totalPrice
-// });
