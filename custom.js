@@ -16,7 +16,7 @@ function countFunction(numberCount) {
     if (numberCount == true) {
         valuePlus = inputValue.value = parseInt(inputValue.value) + 1;
     }
-    if (numberCount == false) {
+    if (numberCount == false && inputValue.value > 0) {
         valuePlus = inputValue.value = parseInt(inputValue.value) - 1;
     }
     // Calculation Product-rate
@@ -31,12 +31,7 @@ function countFunction(numberCount) {
 
 // Minus Button Event
 btnSub.addEventListener('click', function () {
-    // Sub Number Count Condition
-    if (inputValue.value == 0) {
-        removeAttribute("desabled")
-    } else {
-        countFunction(false);
-    }
+    countFunction(false);
 })
 
 // Price Function
