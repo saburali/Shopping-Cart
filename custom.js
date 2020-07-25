@@ -11,6 +11,12 @@ btnAdd.addEventListener('click', function () {
     countFunction(true);
 })
 
+// Minus Button Event
+btnSub.addEventListener('click', function () {
+    countFunction(false);
+})
+
+// Button Event Function
 function countFunction(numberCount) {
     // Add Number Count
     if (numberCount == true) {
@@ -28,11 +34,6 @@ function countFunction(numberCount) {
     // Total Price
     document.getElementById("total-price").innerText = priceResult + taxPriceResult;
 }
-
-// Minus Button Event
-btnSub.addEventListener('click', function () {
-    countFunction(false);
-})
 
 // Price Function
 function addFunction(id) {
