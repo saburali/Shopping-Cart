@@ -8,8 +8,17 @@ const totalPrice = addFunction("total-price");
 
 // Plus Button Event
 btnAdd.addEventListener('click', function () {
+    countFunction(true);
+})
+
+function countFunction(numberCount) {
     // Add Number Count
-    const valuePlus = inputValue.value = parseInt(inputValue.value) + 1;
+    if (numberCount == true) {
+        valuePlus = inputValue.value = parseInt(inputValue.value) + 1;
+    }
+    if (numberCount == false) {
+        valuePlus = inputValue.value = parseInt(inputValue.value) - 1;
+    }
     // Calculation Product-rate
     const priceValue = document.getElementById('price').innerText = (price * valuePlus);
     // Sub Total Price
@@ -18,7 +27,7 @@ btnAdd.addEventListener('click', function () {
     const taxPriceResult = document.getElementById("tax-price").innerText = taxPrice;
     // Total Price
     document.getElementById("total-price").innerText = priceResult + taxPriceResult;
-})
+}
 
 // Minus Button Event
 btnSub.addEventListener('click', function () {
@@ -26,18 +35,10 @@ btnSub.addEventListener('click', function () {
     if (inputValue.value == 0) {
         removeAttribute("desabled")
     } else {
-        // Sub Number Cout
-        const valueMinus = inputValue.value = parseInt(inputValue.value) - 1;
-        // Calculation Product-rate
-        const priceValue = document.getElementById('price').innerText = (price * valueMinus);
-        // Sub Total Price
-        const priceResult = document.getElementById('sub-totalPrice').innerText = priceValue;
-        // Tax Price
-        const taxPriceResult = document.getElementById("tax-price").innerText = taxPrice;
-        // Total Price
-        document.getElementById("total-price").innerText = priceResult + taxPriceResult;
+        countFunction(false);
     }
 })
+
 // Price Function
 function addFunction(id) {
     const productRate = document.getElementById(id).innerText;
